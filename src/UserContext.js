@@ -1,5 +1,5 @@
 import React from "react";
-import { TOKEN_POST, USER_GET } from "./api";
+import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from "./api";
 export const UserContext = React.createContext();
 
 export const UserStorage = ({ children }) => {
@@ -7,6 +7,26 @@ export const UserStorage = ({ children }) => {
   const [login, setLogin] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
+
+  React.useEffect(() => {
+    async function autoLogin() {
+      const token = window.localStorage.getItem("token");
+      if (token) {
+        try {
+          setError(null);
+          setLoading(true);
+          const { url, options } = TOKEN_VALIDATE_POST(token);
+          const response = await fetch(url, options);
+          if (!response.ok) throw new Error("Token invalido");
+          await getUser(token);
+        } catch (error) {
+        } finally {
+          setLoading(false);
+        }
+      }
+    }
+    autoLogin();
+  }, []);
 
   async function getUser(token) {
     const { url, options } = USER_GET(token);
