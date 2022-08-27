@@ -23,6 +23,9 @@ You can register, post pictures, comment on other user's pictures, retrieve pass
 
 [click here, see closer](https://dogs-cs.vercel.app/) 😉
 
+<b>Note</b>: The application uses a public API, with thousands of registrations, if you can't register, you can use the default login: "dog", "dog" for user and password.
+
+
 ## 🚀 Technologies
 
 - [ReactJS](https://reactjs.org/)
