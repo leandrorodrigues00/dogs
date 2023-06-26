@@ -15,7 +15,7 @@
 
 ## 👩‍💻 About the project
 
-Dogs is a project created for the ReactJS course at [Origamid](https://www.origamid.com/)
+Dogs is a social network for dogs and offers a number of features and functionality for users to explore.
 
 In this project, you navigate in a social network for dogs.
 
