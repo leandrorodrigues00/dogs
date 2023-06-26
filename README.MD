@@ -17,8 +17,6 @@
 
 Dogs is a social network for dogs and offers a number of features and functionality for users to explore.
 
-In this project, you navigate in a social network for dogs.
-
 You can register, post pictures, comment on other user's pictures, retrieve passwords and track statics of posts !
 
 [click here, see closer](https://dogs-cs.vercel.app/) 😉
